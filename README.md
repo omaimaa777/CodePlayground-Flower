@@ -47,13 +47,26 @@ Sets the element’s position relative to the viewport and reapplies transform (
 - x: number; horizontal position as a fraction of `window.innerWidth`
 - y: number; vertical position as a fraction of `window.innerHeight`
 - element: HTMLElement to move; defaults to `thing`
-Effect: sets `style.left/top` in pixels and `style.transform` to `translate(x*vw, y*vh) rotate(rotation)`.
+Effect: sets `style.left/top` in pixels and `style.transform` to `translate(x*vw, y*vh) rotate(rotation)
 
-### `setSize(size, element = thing): void`
-Sets square dimensions in pixels.
-- size: number; pixels for both width and height
-- element: HTMLElement to resize; defaults to `thing`
-Effect: sets `style.width` and `style.height` to `${size}px`.
+### `setPositionPixels(px, py, element = thing): void`
+Set the element position using pixel coordinates measured from the top-left
+of the viewport.
+- px: number; x position in pixels
+- py: number; y position in pixels
+- element: HTMLElement to move; defaults to `thing`
+Effect: stores pixel coordinates and reapplies `style.transform` using
+`translate(px, py) rotate(rotation)`.`.
+
+### `setSize(size|width, height = null, element = thing): void`
+Set the element size. The function supports two main forms:
+
+- `setSize(size)` -> square: width = height = size (backwards compatible)
+- `setSize(width, height)` -> set width and height independently (both in px)
+
+To target a different element, pass it as the third argument: `setSize(size, null, element)` or `setSize(w, h, element)`.
+
+Note: internal state previously exposed as `state.size` is now split into `state.width` and `state.height` (both in pixels).
 
 ### `setRotation(rotation, element = thing): void`
 Sets rotation in degrees and reapplies transform with current position.
@@ -66,4 +79,13 @@ Controls corner radius as a percentage of the element’s size.
 - roundedness: number; typical range 0 (square) to 1 (circle)
 - element: HTMLElement to style; defaults to `thing`
 Effect: sets `style.borderRadius` to `${roundedness * 100}%`.
+
+### `createThing(id = null, className = "thing"): HTMLElement`
+Create and append a new `div` element to the document body. The created
+element will have the provided `className` and optional `id`. If the id is
+already present in the document a numeric suffix will be appended to keep it
+unique (e.g. `id-1`).
+- id: optional string id to assign
+- className: CSS class to add (defaults to `thing`)
+Returns: the newly created `HTMLElement`.
 
