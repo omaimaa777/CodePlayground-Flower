@@ -3,9 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 
-
-
-
 }
 
 
@@ -15,17 +12,13 @@ body {
   overflow: hidden;
 }
 
-
-
-
-
-/*dirt strip at the bottom of the screen*/
+/*dirt strip styling*/
 .dirtstrip {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 900px;
-  background-image: url(/Flower/Pics/19F77A0D-18FD-49B5-AB5D-A70F28328D97.png);
+  background-image: url('Pics/19F77A0D-18FD-49B5-AB5D-A70F28328D97.png');
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -38,17 +31,13 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(/Flower/Pics/sky.jpg);
+  background-image: url('Pics/sky.jpg');
   background-size: cover;        /* Makes the image cover the entire div */
   background-position: center;   /* Centers the image */
   background-repeat: no-repeat;  /* Prevents the image from repeating */
 }
 
 
-
-
-
-/*welcome window styling*/
 .welcome-window {
   position: absolute;
   top: 45%;
@@ -61,21 +50,15 @@ body {
   text-align: center;
 }
 
-
-
-
-/*text styling*/
+/*window styling*/
 .welcome-window h1 {
-  font-size: 1.4rem;
+  font-size: 25px;
   margin-bottom: 10px;
   color: #ffdc6b;
 }
 
-
-
-
 .welcome-window p {
-  font-size: 1rem;
+  font-size: 18px;
   color: #c0e0ff;
   margin-bottom: 20px;
 }
@@ -83,7 +66,7 @@ body {
 
 
 
-/*button styling*/
+/*start button styling*/
 #startButton {
   background-color: #ffe600;
   color: rgb(82, 82, 82);
@@ -91,7 +74,8 @@ body {
   padding: 10px 25px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 15px;
+  /* transition for button color change when you hover over it */
   transition: background-color 0.3s ease;
 }
 
