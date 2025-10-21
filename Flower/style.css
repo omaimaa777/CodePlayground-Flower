@@ -22,7 +22,41 @@ body {
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
+
+  /* accomodates the plant element */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
+
+
+
+/*plant element styling*/
+.plant-container {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+}
+
+
+.plant {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  position: absolute;
+}
+
+
+#plantImage{
+  z-index: 10;
+  margin-top: 900px;
+  width: 150px;  /* Add this - makes it smaller */
+  height: auto;  /* Add this - maintains aspect ratio */
+}
+
 
 
 
@@ -81,7 +115,7 @@ body {
 
 /*button color change when you hover over it*/
 #startButton:hover {
-  background-color: #83f16b;
+  background-color: #91f16b;
 }
 
 
