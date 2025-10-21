@@ -19,7 +19,7 @@ body {
 
 
 
-
+/*dirt strip at the bottom of the screen*/
 .dirtstrip {
   position: absolute;
   bottom: 0;
@@ -33,7 +33,7 @@ body {
 
 
 
-
+/*background sky image styling*/
 .background {
   position: relative;
   width: 100%;
@@ -48,7 +48,7 @@ body {
 
 
 
-
+/*welcome window styling*/
 .welcome-window {
   position: absolute;
   top: 45%;
@@ -94,9 +94,6 @@ body {
   font-size: 1rem;
   transition: background-color 0.3s ease;
 }
-
-
-
 
 /*button color change when you hover over it*/
 #startButton:hover {
