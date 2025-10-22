@@ -118,6 +118,14 @@ body {
 }
 
 
+/*TEST CSS FOR PLANT CONTAINER*/
+.plantContainer {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /*CSS FOR FLOWER*/
 
@@ -186,15 +194,15 @@ body {
 /*flower leaf styling*/
 .flower-leaf {
   position: absolute;
-  width: 50px;
+  width: 60px;
   height: 30px;
   background: #4caf50;
-  top: 600px; /*adjust position to get leaf on right height on stem*/
-  left: 267px; /*adjust position to get leaf on side of stem*/
+  top: 650px; /*position sprout vertically*/
+  left: 50%; /*get sprout leaf to center horizontally */
+  transform: rotate(-deg); /*center sprout leaf and rotate*/
   border-radius: 50px;
-  border-bottom-right-radius: 0;
-  transform: rotate(-1deg); /*rotate leaf at better angle*/
-  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 
