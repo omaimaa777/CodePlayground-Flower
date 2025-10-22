@@ -119,7 +119,7 @@ body {
 
 
 
-/*TESTING CSS FOR FLOWER*/
+/*CSS FOR FLOWER*/
 
 /* setting flower container positioning */
 .flower {
@@ -136,7 +136,7 @@ body {
   width: 120px; /* Adjust size as needed */
   height: 40px; /* Adjust size as needed */
   border-radius: 20px;
-  background: #f878c7;
+  background: #f86ec7;
   margin-top: 600px;
 
 }
@@ -149,7 +149,7 @@ body {
   width: 120px; /* Same size as .flower-head */
   height: 40px; /* Same size as .flower-head */
   border-radius: 20px;
-  background: #f878c7;
+  background: #f86ec7;
   transform: rotate(60deg);
 }
 
@@ -181,5 +181,115 @@ body {
   left: 0;
   right: 0;
   margin: 0 auto;
-
 }
+
+/*flower leaf styling*/
+.flower-leaf {
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  background: #4caf50;
+  top: 600px; /*adjust position to get leaf on right height on stem*/
+  left: 267px; /*adjust position to get leaf on side of stem*/
+  border-radius: 50px;
+  border-bottom-right-radius: 0;
+  transform: rotate(-1deg); /*rotate leaf at better angle*/
+  border-top-left-radius: 0;
+}
+
+
+/*CSS FOR SEED*/
+.seed {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  background: #ffae00; /*brown color for seed*/
+  top: 750px; /*position seed on dirt strip*/
+  left: 50%;
+  transform: translateX(-50%); /*center seed horizontally*/
+  border-radius: 10px;
+}
+
+/*CSS FOR SPROUT*/
+.sprout {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sprout-leaf1 {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  background: #8dce61;
+  top: 730px; /*position sprout leaf on dirt strip*/
+  left: 50%; /*get sprout leaf to center*/
+  transform: rotate(-45deg); /*center sprout leaf and rotate*/
+  border-radius: 50px;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.sprout-leaf2 {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  background: #8dce61;
+  top: 730px; /*position sprout leaf on dirt strip*/
+  left: 30%; /*get sprout leaf to center next to other leaf*/
+  transform: rotate(45deg); /*center sprout leaf and rotate*/
+  border-radius: 50px;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+/*CSS FOR LITTLE FLOWER*/
+.little-flower {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.little-flower-head {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  border-radius: 20px;
+  border-top-left-radius: 4px; /*make top left corner appear*/
+  border-top-right-radius: 4px; /*make top right corner appear*/
+  background: #de0893;
+  margin-top: 800px;
+}
+
+.little-flower-stem {
+  position: absolute;
+  width: 5px;
+  height: 140px; 
+  background: #19991d;
+  top: 620px; /*adjust position to get stem under flower*/
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.little-flower-leaf {
+  position: absolute;
+  width: 45px;
+  height: 25px;
+  background: #19991d;
+  top: 690px; /*adjust position to get leaf on right height on stem*/
+  left: 105px; /*adjust position to get leaf on side of stem*/
+  border-radius: 50px;
+  border-bottom-right-radius: 0;
+  transform: rotate(-1deg); /*rotate leaf at better angle*/
+  border-top-left-radius: 0;
+}
+
+
+  
