@@ -31,7 +31,8 @@ body {
 
 
 
-/*plant element styling*/
+/*plant element styling
+
 .plant-container {
   width: 300px;
   height: 400px;
@@ -54,9 +55,7 @@ body {
   z-index: 10;
   margin-top: 900px;
   width: 150px;  /* Add this - makes it smaller */
-  height: auto;  /* Add this - maintains aspect ratio */
-}
-
+  /*height: auto; */ /* Add this - maintains aspect ratio */
 
 
 
@@ -120,7 +119,67 @@ body {
 
 
 
+/*TESTING CSS FOR FLOWER*/
+
+/* setting flower container positioning */
+.flower {
+ width: 300px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
+/*styling for flower head petal*/
+.flower-head {
+  width: 120px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  border-radius: 20px;
+  background: #f878c7;
+  margin-top: 600px;
 
+}
 
+/*styling to rotate "duplicate" and rotate flower petals*/
+.flower-head::after, 
+.flower-head::before {
+  content: '';
+  position: absolute;
+  width: 120px; /* Same size as .flower-head */
+  height: 40px; /* Same size as .flower-head */
+  border-radius: 20px;
+  background: #f878c7;
+  transform: rotate(60deg);
+}
+
+.flower-head::before {
+  transform: rotate(-60deg);
+}
+
+/*flower middle styling*/
+.flower-middle {
+  position: absolute;
+  background: #ffd500;
+  height: 30px;
+  width: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 9;
+  top: 487px; /*adjust position to get circle in middle of petals*/
+  border-radius: 50%; /*rounds the square into a circle*/
+}
+
+/*flower stem styling*/
+.flower-stem {
+  position: absolute;
+  width: 10px;
+  height: 215px; 
+  background: #4caf50;
+  top: 540px; /*adjust position to get stem under flower*/
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+}
