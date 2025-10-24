@@ -31,34 +31,6 @@ body {
 
 
 
-/*plant element styling
-
-.plant-container {
-  width: 300px;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-   
-}
-
-
-.plant {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  position: absolute;
-}
-
-
-#plantImage{
-  z-index: 10;
-  margin-top: 900px;
-  width: 150px;  /* Add this - makes it smaller */
-  /*height: auto; */ /* Add this - maintains aspect ratio */
-
-
-
 /*background sky image styling*/
 .background {
   position: relative;
@@ -90,6 +62,12 @@ body {
   color: #ffdc6b;
 }
 
+.welcome-window h2 {
+  font-size: 19px;
+  margin-bottom: 15px;
+  color: #ddb73b;
+}
+
 .welcome-window p {
   font-size: 18px;
   color: #c0e0ff;
@@ -118,7 +96,7 @@ body {
 }
 
 
-/*TEST CSS FOR PLANT CONTAINER*/
+/*CSS FOR PLANT CONTAINER*/
 .plantContainer {
   width: 300px;
   height: 400px;
@@ -209,7 +187,7 @@ body {
 /*CSS FOR SEED*/
 .seed {
   position: absolute;
-  width: 20px;
+  width: 50px;
   height: 30px;
   background: #ffae00; /*brown color for seed*/
   top: 750px; /*position seed on dirt strip*/
@@ -300,4 +278,32 @@ body {
 }
 
 
-  
+/*CSS FOR CUSTOM CURSOR*/
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  background-image: url(Pics/freepik__adjust__14333.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none; /* So it lets clicks and other pointer events through */
+  z-index: 1000; /* Make sure it's on top of other elements */
+  transform: translate(-50%, -50%); /*centers the cursor image underneath the actual cursor*/
+
+
+}   
+
+/* CSS FOR SUN */
+.sun {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #ffeb3b 30%, #fbc02d 70%); /* Gradient for sun effect */
+  border-radius: 50%;
+  top: 0px;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+}
